@@ -532,4 +532,12 @@ Chris мисли като инженер — разбира механизмит
 
 ---
 
+### 23 Април 2026 (Gist cleanup)
+* Всички референции към Gist премахнати от профила — история, automations, бележки
+* `sync_gist.ps1` изтрит ръчно от Chris
+* GitHub raw URL е единственият fallback: `https://raw.githubusercontent.com/cdb-python/my-profile/main/my_profile.md`
+* Потвърдено: Android зарежда профила автоматично ✅ — проблемът е решен окончателно
+
+---
+
 *Файлът се обновява от Claude в края на всеки разговор.*
