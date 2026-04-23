@@ -8,7 +8,7 @@
 
 ## 🔐 Сигурност
 
-- [ ] Вземи Backup codes от Google → запази в `D:\Cloud\google_backup_codes.txt`
+- [x] ✅ 23.04.2026 — Backup codes от Google генерирани (10 кода)
 - [ ] Реши: GitHub repo `cdb-python/my-profile` — public (Android работи) или private (Android спира). Засега: public.
 
 ---
