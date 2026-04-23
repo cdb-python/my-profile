@@ -144,7 +144,6 @@
 
 ### Автоматизации:
 * `D:\Cloud\sync_repo.ps1` — синхронизира профила към GitHub repo (работи от Android/Edge)
-* `D:\Cloud\sync_gist.ps1` — стар скрипт за Gist (запазен, не се ползва)
 * Windows Task Scheduler (ClaudeProfileSync) — изпълнява sync_repo.ps1 на всеки 3 часа
 * Startup shortcut — изпълнява при логване
 
@@ -234,16 +233,14 @@ Chris мисли като инженер — разбира механизмит
 * Научи за Skills, Prompt Engineering, Routines концепциите
 * Изгради Software Roadmap
 * Активира Pro план ($20/мес)
-* Настрои автоматичен Gist sync (Task Scheduler, на 3 часа)
+* Настрои автоматичен sync към GitHub repo (Task Scheduler, на 3 часа)
 * Научи кога да ползва Opus vs Sonnet
 * Планира отделен разговор за финансово портфолио в Revolut (с Opus)
 
 ### 20 Април 2026 (втори разговор — сигурност)
 * Разговор за сигурност на компа и Claude достъп до данни
-* Знае: GitHub Gist "Secret" ≠ private — всеки с URL може да чете
-* Обмисля да премахне точния адрес и лични данни от Gist-а
 * Запознат с prompt injection риска при MCP
-* Потвърдено: `sync_gist.ps1` и `create_startup.ps1` съществуват в D:\Cloud
+* Потвърдено: `create_startup.ps1` съществува в D:\Cloud
 * **Важно:** Task Scheduler задачата (3ч) е документирана в профила, но не е верифицирана дали е активна — провери с `Get-ScheduledTask | Where-Object {$_.TaskName -like "*Claude*"}`
 * Препоръки приети: BitLocker на D/Z дискове, Data Controls в Claude.ai
 
@@ -254,23 +251,21 @@ Chris мисли като инженер — разбира механизмит
 ### 20 Април 2026 (трети разговор — финанси + качество на Claude)
 * Разговор стартира с финансова тема, но се превърна в урок за качеството на Claude
 * **Важно за подхода на Chris:** Изключително наблюдателен, хваща грешки незабавно, не прощава халюцинации и самозаблуди
-* Хвана Claude в три грешки: (1) неправилно прочетен Gist, (2) погрешна диагноза за несинхронизирани файлове, (3) неправилно предположение за браузър вместо десктоп
+* Хвана Claude в три грешки: (1) неправилно прочетен профил, (2) погрешна диагноза за несинхронизирани файлове, (3) неправилно предположение за браузър вместо десктоп
 * **Урок за Claude:** Когато не е сигурен — да каже "не знам", а не да съчинява
-* Gist raw URL за браузър/Android: `https://gist.githubusercontent.com/cdb-python/a817b2a3fcc66e4f5236856a48946a7f/raw/моят_профил.md`
-* Трите файла са синхронизирани и идентични: `D:\Cloud\моят_профил.md`, `моят_профил_backup.md`, Gist
+* Трите файла са синхронизирани и идентични: `D:\Cloud\my_profile.md`, `my_profile_backup.md`, GitHub repo
 * **Характер:** Chris инвестира лично време да подобри Claude — не от нетърпение, а от желание системата да работи правилно. Цени точността над скоростта.
 
 ---
 
 ### 21 Април 2026 (Android sync разговор)
-* Проблем: Gist е блокиран от robots.txt — не може да се fetch-ва от Claude
+* Проблем: профилът не се зареждаше от Android
 * Решение: Създаден нов GitHub repo `cdb-python/my-profile` (публичен)
-* Написан нов скрипт `sync_repo.ps1` — push-ва профила към repo вместо Gist
-* Task Scheduler (ClaudeProfileSync) обновен да ползва новия скрипт
-* Raw URL потвърден като работещ: `https://raw.githubusercontent.com/cdb-python/my-profile/main/моят_профил.md`
+* Написан нов скрипт `sync_repo.ps1` — push-ва профила към repo
+* Task Scheduler (ClaudeProfileSync) настроен да ползва новия скрипт
+* Raw URL потвърден като работещ: `https://raw.githubusercontent.com/cdb-python/my-profile/main/my_profile.md`
 * Claude Preferences обновени с новия URL
-* **Тествано и потвърдено от Android** — профилът се зарежда автоматично без paste
-* От сега профилът се зарежда автоматично от всяко устройство (Android, Edge, комп) ✅
+* **Тествано и потвърдено от Android** — профилът се зарежда автоматично без paste ✅
 
 ---
 
@@ -386,7 +381,7 @@ Chris мисли като инженер — разбира механизмит
 * Bootstrap paradox: правилото трябва да е в `userPreferences`, не само в профила
 * `userPreferences` обновени — нова логика: 1) Desktop Commander първо, 2) само ако гръмне → URL. Никога обратното.
 * Премахнато "Ако MCP е наличен / не е наличен" — заменено с по-просто и точно 1→2 приоритетно правило
-* "Gist" заменено с "GitHub repo" навсякъде в userPreferences
+* "GitHub repo" навсякъде в userPreferences
 
 ---
 
@@ -475,8 +470,8 @@ Chris мисли като инженер — разбира механизмит
 ### 23 Април 2026 (сигурност + технически fix + профил 2.0)
 
 * Всички файлове в `D:\Cloud` преименувани на ASCII — `my_profile.md`, `my_profile_backup.md`
-* `sync_repo.ps1` обновен — push-ва като `my_profile.md`, премахнат `[Uri]::EscapeDataString`
-* Проблемът с кирилицата в URL-а при fetch е решен окончателно
+* `sync_repo.ps1` финализиран — push-ва профила към GitHub repo
+* Проблемът с кирилицата в имената на файловете е решен окончателно
 * Google акаунт: 2FA напълно настроен — passkey + Google prompt + Authenticator app + phone number
 * ⚠️ **Предстои:** вземи Backup codes от Google → запази в `D:\Cloud`
 * ⚠️ **Предстои:** направи GitHub repo `cdb-python/my-profile` private
