@@ -9,7 +9,7 @@
 > 6. При добавяне — постави датата до новата информация.
 > 7. КОГА да запишеш: когато потребителят напише "край", "чао", "довиждане", "запази" или "затвори".
 > 8. Ако не е ясно дали нещо е важно — попитай: "Искаш ли да запазя нещо от този разговор?"
-> 9. ПРИОРИТЕТ при четене на профила: Десктоп → `Desktop Commander:read_file` от `D:\Cloud\моят_профил.md`. Само ако гръмне → fetch от GitHub URL. Никога обратното.
+> 9. ПРИОРИТЕТ при четене на профила: Десктоп → `Desktop Commander:read_file` от `D:\Cloud\my_profile.md`. Само ако гръмне → fetch от GitHub URL. Никога обратното.
 
 ---
 
@@ -149,8 +149,8 @@
 * Startup shortcut — изпълнява при логване
 
 ### Профил файлове:
-* `D:\Cloud\моят_профил.md` — основен (пише Claude)
-* `D:\Cloud\моят_профил_backup.md` — backup
+* `D:\Cloud\my_profile.md` — основен (пише Claude)
+* `D:\Cloud\my_profile_backup.md` — backup
 * GitHub repo raw URL: `https://raw.githubusercontent.com/cdb-python/my-profile/main/my_profile.md`
 
 ---
