@@ -159,6 +159,7 @@
 | Инструмент | Защо | Статус |
 |---|---|---|
 | Профил 2.0 | Раздели my_profile.md на ядро + my_profile_archive.md (история). По-малко токени при всеки разговор. | 🔜 Следващо |
+| GitHub repo private | Направи `cdb-python/my-profile` private + реши Android fallback без raw URL | 🔜 Планирано |
 | Gmail MCP | Пише/чете мейли заедно с Claude | 🔜 Следващо |
 | SQLite MCP | База данни за клиенти от залата | 🔜 При Skills |
 | Obsidian | Визуализация на D:\Cloud | 🔜 Когато искаш |
