@@ -81,3 +81,13 @@
 - [personality.md](http://personality.md) (\~7.6KB) — зарежда се при всеки разговор вместо целия профил
 - Правила за запис добавени в [personality.md](http://personality.md) (кое в кой файл)
 - userPreferences обновени да сочат към D:\\Cloud\\profile\\personality.md
+
+## 24 Април 2026 (сън данни — корекция)
+
+- Открита грешка в [health.md](http://health.md): средният сън 4.8ч беше изчислен от сегменти, не от нощи
+- Анализ на суровите данни от Z:\\Syncthing-s22\\Download\\Samsung Health (com.samsung.shealth.sleep CSV)
+- Реални стойности: avg 7.12ч (Oct24-Apr26) | 6.94ч (последни 12мо) — съвпадат с часовника (6h43m)
+- Feb26 дъно: 6.49ч (не 3.5ч) | Тренд: Nov25(7.43ч) → Apr26(6.05ч)
+- Преоценка: КАЧЕСТВЕН дефицит, не количествен. Sleep Score 58/100, Physical Recovery 54%
+- Ново заключение: тренировъчна честота е приоритет №1 — всички останали метрики зависят от нея
+- [health.md](http://health.md) обновен, backup: health_backup_20260424.md
