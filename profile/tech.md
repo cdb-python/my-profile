@@ -1,24 +1,8 @@
-# tech.md
+# [tech.md](http://tech.md)
 
 ## Хардуер
 
-| Компонент | Детайл |
-|---|---|
-| CPU | AMD Ryzen 9 5900X (12 ядра / 24 нишки) |
-| Дънна платка | ASUS TUF GAMING X570-PLUS (WI-FI) |
-| RAM | 64 GB DDR4 |
-| GPU | 2x AMD Radeon RX 6800 XT (16GB GDDR6) |
-| PSU | 850W |
-| SSD 1 | Samsung 970 EVO 250GB (C:) |
-| SSD 2 | ADATA 772GB (D:) |
-| SSD 3 | ADATA 204GB (E:) |
-| HDD | 2x WD 14TB (X:, Y:) — Storage Space 13TB (Z:) |
-| Мишка | Logitech G502 |
-| Клавиатура | VANTAR MX |
-| ОС | Windows 11 Pro 25H2 |
-| Node.js | v24.13.0 |
-| Монитор | LG OLED48C34LA — 48", 4K, 120Hz |
-| Аудио | Logitech Z906 5.1 |
+КомпонентДетайлCPUAMD Ryzen 9 5900X (12 ядра / 24 нишки)Дънна платкаASUS TUF GAMING X570-PLUS (WI-FI)RAM64 GB DDR4 (2 стика)GPU2x AMD Radeon RX 6800 XT (16GB GDDR6)PSU850WSSD 1Samsung 970 EVO 250GB (C:)SSD 2ADATA SX8100NP 954GB — 2 партиции: D: (\~754GB) и E: (\~200GB)HDD2x WD 14TB (X:, Y:) — Storage Space 13TB (Z:)МишкаLogitech G502КлавиатураVANTAR MXОСWindows 11 Pro 25H2 (Build 26200.7171)Node.jsv24.13.0МониторLG OLED48C34LA — 48", 4K, 120HzАудиоLogitech Z906 5.1
 
 ## Claude Setup
 
@@ -27,11 +11,18 @@
 - **Opus:** финансов анализ, сложни стратегии, дълбоки анализи
 
 ## Активни MCP сървъри
-- Filesystem — достъп до D:\Cloud
+
+- Filesystem — достъп до D:\\Cloud
 - Desktop Commander — терминал, файлове
 - PDF Viewer
 
+## Активен Софтуер
+
+- **Bitcoin Core v30.0.0** — pruned node, data dir E:\\Bitcoin Core, prune=153600
+- **Syncthing** — работи при стартиране
+
 ## Профил файлове
+
 - `D:\Cloud\profile\` — активна структура (пише Claude)
 - `D:\Cloud\my_profile.md` — стар монолитен файл (архив, не се ползва)
 - GitHub repo raw URL: `https://raw.githubusercontent.com/cdb-python/my-profile/main/my_profile.md`
@@ -39,17 +30,10 @@
 
 ## Software Roadmap
 
-| Инструмент | Защо | Статус |
-|---|---|---|
-| Профил 2.0 | Разделен на D:\Cloud\profile\ структура | ✅ Готово |
-| GitHub repo private | private + Android fallback без raw URL | 🔜 Планирано |
-| Gmail MCP | Пише/чете мейли с Claude | 🔜 Следващо |
-| SQLite MCP | База данни за клиенти от залата | 🔜 При Skills |
-| Obsidian | Визуализация на D:\Cloud | 🔜 Когато искаш |
-| n8n | Автоматизации | 🔜 По-късно |
-| Claude Code | CLI среда, slash команди, hooks | 🔜 Когато е момент |
+ИнструментЗащоСтатусПрофил 2.0Разделен на D:\\Cloud\\profile\\ структура✅ ГотовоGitHub repo privateprivate + Android fallback без raw URL🔜 ПланираноGmail MCPПише/чете мейли с Claude🔜 СледващоSQLite MCPБаза данни за клиенти от залата🔜 При SkillsObsidianВизуализация на D:\\Cloud🔜 Когато искашn8nАвтоматизации🔜 По-късноClaude CodeCLI среда, slash команди, hooks🔜 Когато е момент
 
 ## Skills Roadmap
+
 - Тренировъчна програма по клиентски параметри
 - Хранителен режим по метода на Chris
 - Клиентски профил и анализ
