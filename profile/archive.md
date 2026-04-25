@@ -91,3 +91,15 @@
 - Преоценка: КАЧЕСТВЕН дефицит, не количествен. Sleep Score 58/100, Physical Recovery 54%
 - Ново заключение: тренировъчна честота е приоритет №1 — всички останали метрики зависят от нея
 - [health.md](http://health.md) обновен, backup: health_backup_20260424.md
+
+## 25 Април 2026 (Windows оптимизация + Bitcoin Core fix)
+
+- Пълна системна диагностика: CPU/RAM/дискове/процеси/мрежа
+- **Bitcoin Core fix:** нодът не стартираше — добавен `prune=153600` в bitcoin.conf. Нодът тръгна и синхронизира.
+- [**tech.md**](http://tech.md) **коригиран:** ADATA е един 954GB диск с 2 партиции (не 2 отделни SSD-та), добавени Bitcoin Core v30.0.0, Syncthing, Tailscale, IIS/cdb-webdav
+- **Startup cleanup:** премахнати/disabled — BTC Core.lnk дубликат, Edge AutoLaunch, WingetUI, AMDNoiseSuppression, MiniTool, GPU Tweak III, ASUS Armoury Crate tasks и services
+- **Оптимизации:** SysMain disabled, Update cache изчистен (+5.2GB), DISM WinSxS cleanup (-5.5GB на WinSxS), общо \~4.4GB свободно на C:
+- **Мрежа:** латентност 14ms, Tailscale работи (S22 direct), Bitcoin Core портове ОК
+- **IIS/cdb-webdav:** стар WebDAV сървър настроен с Copilot — не е malware, pending cleanup след Macrium backup
+- **RAM XMP:** Patriot 2x32GB работи на 2933MHz — XMP не е активиран в BIOS (todo)
+- Chrome Remote Desktop: грешно спрян и върнат — умишлено запазен
